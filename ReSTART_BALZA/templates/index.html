@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="container-db">
+            <div class="container-db-item">
+                {% for row in rows %}
+                <div class="container-db-item-block">
+                    <img src="../static/img/1299198-3f51b5.svg" alt="" class="item-img">
+                    <div class="container-db-item-block-txt">
+                        <p>Название: {{ row[1] }}</p>
+                        <p>Категория: {{ row[2] }}</p>
+                        <p>Производитель: {{ row[3] }}</p>
+                        <p>Год: {{ row[4] }}</p>
+                        <p>Состояние: {{ row[5] }}</p>
+                        <p>Тип кузова: {{ row[6] }}</p>
+                        <p>Пробег: {{ row[7] }}</p>
+                        <p>Цена: {{ row[8] }}</p>
+                        <button>Купить</button>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
